@@ -1,0 +1,6 @@
+Problem 2: Aggregation
+
+2F: order by the most recent month first 
+COMMENTS: This query does not require me to extract information from any particular column, therefore I selected to display every column using the * operator. However, the query does require me to display the loans in order, starting from the most recent month. The 'created' column of the loans table contained timestamps for the loans. Thus, I used 'ORDER BY created' DESC to display the loans from most recent to least recent. 
+
+SELECT * FROM loans ORDER BY created DESC;

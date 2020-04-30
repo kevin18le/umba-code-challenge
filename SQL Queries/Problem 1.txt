@@ -1,0 +1,9 @@
+PROBLEM 1: Joining Tables
+
+COMMENTS: This problem requires data retrieval from three separate tables. Retrieving data from multiple tables necessitates joining tables using JOIN. Three tables (users, loans, and transactions) were joined in this query. The columns that were to be retrieved were loan id, loan amount, user id, and transaction fee. I selected all this information from the 'transactions' table because of the three tables, it contained all the information we needed. The WHERE clause then selects all transactions of loans that are either 'active' or 'repaid'. Lastly, the 't_type' column in 'transactions' was missing, so there was no way I differentiate disbursements from lodgments. 
+
+SELECT loans.id, loans.amount, users.id, transactions.fee 
+FROM transactions
+JOIN loans ON loans.id = transactions.loan_id
+JOIN users ON transactions.user_id = users.id
+WHERE loans.loan_status = 'active' OR loans.loan_status = 'repaid';

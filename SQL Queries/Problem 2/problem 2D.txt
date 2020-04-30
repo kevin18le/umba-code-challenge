@@ -1,0 +1,6 @@
+Problem 2: Aggregation
+
+2D: smallest loan size per month
+COMMENTS: Since I am being asked for the smallest loan size, I used the MIN() function to find the smallest quantities in the amount column of the loans table that fulfill a certain grouping. The grouping and ordering is the same in this query as it was the last because the problem asked for an aggregate per month.
+
+SELECT MIN(amount), EXTRACT(MONTH FROM created) FROM loans GROUP BY EXTRACT(MONTH FROM created) ORDER BY EXTRACT(MONTH FROM created) ASC;

@@ -1,0 +1,6 @@
+PROBLEM 2: Aggregation
+
+2A: number of loans per month
+COMMENTS: Since I am being asked to show the number of loans, I used the COUNT() aggregate function to count all the loans that fulfill a certain condition/grouping. The grouping in question is the month. Thus, I used EXTRACT() to extract the month from the timestamps in the 'created' column of the loans table and ordered them in ascending order (1-12) for presentability.
+
+SELECT COUNT(id), EXTRACT(MONTH FROM created) FROM loans GROUP BY EXTRACT(MONTH FROM created) ORDER BY EXTRACT(MONTH FROM created) ASC;

@@ -1,0 +1,6 @@
+Problem 2: Aggregation 
+
+2C: average amount of each loan per month
+COMMENTS: Since I am being asked for the average amount of each loan, I used the AVG() function to take the average of the quantities of the 'amount' column of the loans table that fulfill a certain grouping. The grouping and ordering is the same in this query as it was the last because the problem asked for an aggregate per month.
+
+SELECT AVG(amount), EXTRACT(MONTH FROM created) FROM loans GROUP BY EXTRACT(MONTH FROM created) ORDER BY EXTRACT(MONTH FROM created) ASC;
