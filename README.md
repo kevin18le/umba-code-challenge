@@ -1,1 +1,4 @@
-# umba-code-challenge
+# Umba Product/Analyst Intern Code Challenge
+This code challenge comprised of three main problems that tested my skills in data manipulation and data analysis. The first two problems, which tested joining tables and aggregation, required me to log onto a live PostgreSQL database and were completed using SQL. All SQL queries used for these problems can be found in .txt files in the "SQL Queries" folder in this repository. Along with the SQL query, the .txt files describe each problem and provide a COMMENTS section, where I describe my reasoning. 
+
+The final problem tested my data analysis abilities. Given a .csv file of weekly logins, I was asked to determine which groups had high engagement levels. To answer this question, I used the pandas and matplotlib.pyplot libraries in Python. My solution can be found in a Jupyter notebook titled 'Data-Analysis'. This notebook contains all the comments that describe my thought process, code, and visualizations necessary to answer this question. 
